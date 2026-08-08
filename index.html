@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timothy Oghenero Jehwo | Full-Stack Software Engineer</title>
+    <meta name="description" content="Portfolio of Timothy Oghenero Jehwo, a Full-Stack Software Engineer in Abuja, Nigeria building secure, scalable products across HealthTech, FinTech, SaaS, and business platforms with AI-assisted development workflows.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.dataset.theme = savedTheme || preferredTheme;
+            });
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="container nav-wrap">
+                <a href="#home" class="brand">ROYALTY</a>
+
+                <nav class="desktop-nav" aria-label="Primary navigation">
+                    <a href="#about">About</a>
+                    <a href="#stack">Stack</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#credentials">Credentials</a>
+                    <a href="assets/docs/Timothy-Oghenero-Jehwo-CV.pdf" download class="nav-link-pill">Download CV</a>
+                    <a href="#contact" class="nav-cta">Get in Touch</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode" aria-pressed="false">
+                        <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+                        <span class="theme-toggle-label">Dark</span>
+                    </button>
+                    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation">
+                <a href="#about">About</a>
+                <a href="#stack">Stack</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#credentials">Credentials</a>
+                <a href="assets/docs/Timothy-Oghenero-Jehwo-CV.pdf" download>Download CV</a>
+                <a href="#contact" class="nav-cta mobile-cta">Get in Touch</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="hero section">
+                <div class="hero-orb hero-orb-one"></div>
+                <div class="hero-orb hero-orb-two"></div>
+
+                <div class="container hero-grid reveal">
+                    <div class="hero-copy">
+                        <div class="availability-pill">
+                            <span class="status-dot"></span>
+                            <span>Available for new opportunities</span>
+                        </div>
+
+                        <h1>
+                            Building <span class="text-gradient">secure, scalable products</span>
+                            for HealthTech, FinTech, and SaaS.
+                        </h1>
+
+                        <p class="hero-text">
+                            I’m <strong>Timothy Oghenero Jehwo</strong>, a Full-Stack Software Engineer based in Abuja, Nigeria, with 3+ years of experience building production web applications using Laravel, PHP, Vue.js, React, TypeScript, MySQL, and REST APIs.
+                            I’m open to remote opportunities and relocation worldwide.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="assets/docs/Timothy-Oghenero-Jehwo-CV.pdf" download class="btn btn-secondary">Download CV</a>
+                            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        </div>
+
+                        <div class="hero-highlights">
+                            <div class="metric-card glass-card">
+                                <span class="metric-value">3+ Years</span>
+                                <span class="metric-label">Production software engineering experience</span>
+                            </div>
+                            <div class="metric-card glass-card">
+                                <span class="metric-value">HealthTech · FinTech · SaaS</span>
+                                <span class="metric-label">Core product domains</span>
+                            </div>
+                            <div class="metric-card glass-card">
+                                <span class="metric-value">LLM AI-assisted</span>
+                                <span class="metric-label">ChatGPT, Claude, and Cursor in delivery workflow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section section-bordered">
+                <div class="container split-section reveal">
+                    <div>
+                        <p class="eyebrow">About Me</p>
+                        <h2>Engineering software that stays secure, maintainable, and production-ready.</h2>
+                        <div class="copy-stack">
+                            <p>
+                                I’m a <strong>Full-Stack Software Engineer</strong> with experience building and maintaining production applications across
+                                <strong>HealthTech, FinTech, SaaS, hospitality, POS, and internal business platforms</strong>.
+                            </p>
+                            <p>
+                                My focus is on secure REST APIs, authentication systems, RBAC, payment integrations, backend performance, and maintainable frontend experiences.
+                            </p>
+                            <p>
+                                I actively use <strong>LLM AI-assisted development tools</strong> such as ChatGPT, Claude, and Cursor to accelerate debugging, documentation, prototyping, and feature delivery while keeping code quality high.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="profile-card glass-card">
+                        <div class="profile-frame">
+                            <img src="assets/images/royal_office.png" alt="Timothy Jehwo Oghenero in an office setting">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stack" class="section">
+                <div class="container reveal">
+                    <div class="section-heading centered">
+                        <p class="eyebrow">Tech Stack</p>
+                        <h2>The tools I use to build reliable products.</h2>
+                    </div>
+                    <div id="skills-grid" class="skills-grid"></div>
+                </div>
+            </section>
+
+            <section id="services" class="section section-muted">
+                <div class="container reveal">
+                    <div class="section-heading centered">
+                        <p class="eyebrow">Services</p>
+                        <h2>How I can help businesses build and scale software.</h2>
+                    </div>
+                    <div id="services-grid" class="services-grid"></div>
+                </div>
+            </section>
+
+            <section id="projects" class="section section-muted">
+                <div class="container reveal">
+                    <div class="section-heading row-heading">
+                        <div>
+                            <p class="eyebrow">Featured Projects</p>
+                            <h2>Selected work across systems engineering and product development.</h2>
+                        </div>
+                        <a href="https://github.com/Royal07T" target="_blank" rel="noreferrer" class="inline-link">View GitHub</a>
+                    </div>
+                    <div id="projects-grid" class="projects-grid"></div>
+                </div>
+            </section>
+
+            <section id="approach" class="section">
+                <div class="container reveal">
+                    <div class="feature-panel glass-card">
+                        <div class="feature-copy">
+                            <p class="eyebrow">How I Work</p>
+                            <h2>High-quality delivery with speed, structure, and LLM-assisted engineering.</h2>
+                            <p>
+                                I combine strong software engineering fundamentals with LLM AI-assisted workflows to prototype faster,
+                                improve implementation quality, accelerate debugging and documentation, and keep architecture decisions consistent across the product lifecycle.
+                            </p>
+                        </div>
+                        <div class="feature-list">
+                            <article>
+                                <span>01</span>
+                                <div>
+                                    <h3>Rapid prototyping</h3>
+                                    <p>Move from product concept to working software quickly without losing clarity in system architecture.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <span>02</span>
+                                <div>
+                                    <h3>Quality-first engineering</h3>
+                                    <p>Prioritize secure APIs, clean code, maintainable backend structure, and practical production stability.</p>
+                                </div>
+                            </article>
+                            <article>
+                                <span>03</span>
+                                <div>
+                                    <h3>LLM-assisted delivery</h3>
+                                    <p>Use ChatGPT, Claude, and Cursor to speed up debugging, documentation, prototyping, and feature delivery without sacrificing quality.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="section section-muted">
+                <div class="container reveal">
+                    <div class="section-heading centered">
+                        <p class="eyebrow">Experience</p>
+                        <h2>Work history across software engineering and infrastructure roles.</h2>
+                    </div>
+                    <div id="experience-list" class="experience-list"></div>
+                </div>
+            </section>
+
+            <section id="credentials" class="section">
+                <div class="container reveal">
+                    <div class="section-heading centered">
+                        <p class="eyebrow">Education & Certifications</p>
+                        <h2>Academic background and professional certifications.</h2>
+                    </div>
+                    <div class="credentials-grid">
+                        <div>
+                            <h3 class="credentials-title">Education</h3>
+                            <div id="education-list" class="credentials-list"></div>
+                        </div>
+                        <div>
+                            <h3 class="credentials-title">Certifications</h3>
+                            <div id="certifications-list" class="credentials-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <div class="container reveal">
+                    <div class="contact-grid">
+                        <div>
+                            <p class="eyebrow">Contact</p>
+                            <h2>Let’s build something great.</h2>
+                            <p class="section-intro">
+                                If you need help with a fintech platform, healthcare solution, SaaS product, admin dashboard,
+                                POS application, or scalable Laravel-based system, I’m ready to collaborate.
+                            </p>
+
+                            <div class="contact-links">
+                                <a href="mailto:timmyroyalty@gmail.com" class="contact-item glass-card">
+                                    <span class="contact-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"></path>
+                                            <path d="m22 8-8.97 5.7a2 2 0 0 1-2.06 0L2 8"></path>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <span class="contact-label">Email</span>
+                                        <strong>timmyroyalty@gmail.com</strong>
+                                    </div>
+                                </a>
+                                <a href="https://wa.me/2347081114942" target="_blank" rel="noreferrer" class="contact-item glass-card">
+                                    <span class="contact-icon whatsapp-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12.04 2C6.52 2 2.05 6.4 2.05 11.84c0 1.74.46 3.45 1.34 4.95L2 22l5.4-1.39a10.08 10.08 0 0 0 4.64 1.13h.01c5.51 0 9.98-4.4 9.98-9.84C22.03 6.4 17.56 2 12.04 2Zm5.82 13.93c-.24.66-1.4 1.25-1.92 1.33-.49.08-1.12.12-1.81-.1-.42-.13-.97-.31-1.67-.61-2.94-1.25-4.86-4.32-5-4.53-.14-.21-1.2-1.58-1.2-3.01s.76-2.13 1.03-2.42c.27-.29.58-.37.77-.37h.55c.18 0 .42-.07.65.48.24.57.82 1.96.89 2.1.07.14.12.31.02.5-.1.19-.15.31-.3.48-.14.17-.29.38-.41.51-.14.14-.28.29-.12.56.17.28.74 1.2 1.58 1.95 1.09.96 2 1.26 2.28 1.4.27.14.43.12.59-.07.17-.19.69-.79.87-1.05.18-.26.36-.21.61-.12.25.09 1.59.74 1.86.87.27.14.45.21.52.33.07.12.07.68-.17 1.34Z"></path>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <span class="contact-label">WhatsApp</span>
+                                        <strong>07081114942</strong>
+                                    </div>
+                                </a>
+                                <a href="https://www.linkedin.com/in/timothy-jehwo-15b12930a/" target="_blank" rel="noreferrer" class="contact-item glass-card">
+                                    <span class="contact-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.3 6.94 1.97 1.97 0 0 0 5.25 3Zm15.19 9.86c0-3.46-1.85-5.07-4.31-5.07-1.99 0-2.88 1.09-3.38 1.86V8.5H9.38c.04.76 0 11.5 0 11.5h3.37v-6.42c0-.34.02-.68.12-.92.27-.68.9-1.38 1.96-1.38 1.38 0 1.94 1.05 1.94 2.59V20h3.37v-7.14Z"></path>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <span class="contact-label">LinkedIn</span>
+                                        <strong>timothy-jehwo-15b12930a</strong>
+                                    </div>
+                                </a>
+                                <a href="https://web.facebook.com/profile.php?id=61565551740194" target="_blank" rel="noreferrer" class="contact-item glass-card">
+                                    <span class="contact-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M13.5 22v-8.2h2.77l.41-3.2H13.5V8.56c0-.93.26-1.56 1.59-1.56h1.7V4.14c-.29-.04-1.29-.14-2.46-.14-2.44 0-4.1 1.49-4.1 4.23v2.37H7.96v3.2h2.27V22h3.27Z"></path>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <span class="contact-label">Facebook</span>
+                                        <strong>Timothy Jehwo</strong>
+                                    </div>
+                                </a>
+                                <a href="assets/docs/Timothy-Oghenero-Jehwo-CV.pdf" download class="contact-item glass-card">
+                                    <span class="contact-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+                                            <path d="M14 2v6h6"></path>
+                                            <path d="M12 12v6"></path>
+                                            <path d="m9.5 15 2.5 3 2.5-3"></path>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <span class="contact-label">Curriculum Vitae</span>
+                                        <strong>Download Timothy Oghenero Jehwo CV</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="glass-card contact-card">
+                            <form id="contact-form" novalidate>
+                                <div class="field-group">
+                                    <label for="name">Full Name</label>
+                                    <input id="name" name="name" type="text" placeholder="Enter your name" required>
+                                    <small class="error-message"></small>
+                                </div>
+
+                                <div class="field-group">
+                                    <label for="email">Email Address</label>
+                                    <input id="email" name="email" type="email" placeholder="example@company.com" required>
+                                    <small class="error-message"></small>
+                                </div>
+
+                                <div class="field-group">
+                                    <label for="message">Project Details</label>
+                                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project requirements..." required></textarea>
+                                    <small class="error-message"></small>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                                <p id="form-status" class="form-status" aria-live="polite"></p>
+                                <p class="form-hint">This static frontend opens your default email app to send the message.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-wrap">
+                <p>© <span id="year"></span> Timothy Jehwo Oghenero. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Royal07T" target="_blank" rel="noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/timothy-jehwo-15b12930a/" target="_blank" rel="noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a href="https://wa.me/2347081114942" target="_blank" rel="noreferrer" class="floating-whatsapp" aria-label="Chat with Timothy Oghenero Jehwo on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2C6.52 2 2.05 6.4 2.05 11.84c0 1.74.46 3.45 1.34 4.95L2 22l5.4-1.39a10.08 10.08 0 0 0 4.64 1.13h.01c5.51 0 9.98-4.4 9.98-9.84C22.03 6.4 17.56 2 12.04 2Zm5.82 13.93c-.24.66-1.4 1.25-1.92 1.33-.49.08-1.12.12-1.81-.1-.42-.13-.97-.31-1.67-.61-2.94-1.25-4.86-4.32-5-4.53-.14-.21-1.2-1.58-1.2-3.01s.76-2.13 1.03-2.42c.27-.29.58-.37.77-.37h.55c.18 0 .42-.07.65.48.24.57.82 1.96.89 2.1.07.14.12.31.02.5-.1.19-.15.31-.3.48-.14.17-.29.38-.41.51-.14.14-.28.29-.12.56.17.28.74 1.2 1.58 1.95 1.09.96 2 1.26 2.28 1.4.27.14.43.12.59-.07.17-.19.69-.79.87-1.05.18-.26.36-.21.61-.12.25.09 1.59.74 1.86.87.27.14.45.21.52.33.07.12.07.68-.17 1.34Z"></path>
+        </svg>
+        <span>WhatsApp</span>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
