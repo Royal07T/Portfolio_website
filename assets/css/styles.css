@@ -523,7 +523,7 @@ button {
 }
 
 .skills-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     margin-top: 2.5rem;
 }
 
@@ -553,19 +553,22 @@ button {
 }
 
 .service-title {
-    margin: 0 0 0.8rem;
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.2rem;
+margin: 0 0 0.8rem;
+font-family: 'Outfit', sans-serif;
+font-size: 1.2rem;
 }
 
 .service-description {
-    margin: 0;
-    color: var(--muted);
-    line-height: 1.8;
+margin: 0;
+color: var(--muted);
+line-height: 1.8;
 }
 
 .service-tags {
-    display: flex;
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+margin-top: 1rem;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 1rem;
@@ -658,7 +661,7 @@ button {
 }
 
 .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     margin-top: 2.5rem;
 }
 
@@ -732,6 +735,45 @@ button {
     margin: 1rem 0 0.5rem;
     font-family: 'Outfit', sans-serif;
     font-size: 1.45rem;
+}
+
+.project-description {
+    margin: 0;
+}
+
+.project-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-soft);
+}
+
+.project-section-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.project-section-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.project-features-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.project-features-list li {
+    margin-bottom: 0.35rem;
 }
 
 .project-tags {
@@ -891,6 +933,21 @@ button {
     display: inline-block;
     margin-top: 0.65rem;
     font-size: 0.9rem;
+}
+
+.credential-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.credential-link:hover {
+    color: var(--primary-2);
+    transform: translateX(4px);
 }
 
 .contact-links {
@@ -1138,6 +1195,14 @@ button {
     .profile-frame {
         min-height: 420px;
     }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 720px) {
@@ -1156,20 +1221,8 @@ button {
         margin-right: 0;
     }
 
-    .footer-links {
-        margin-right: 0;
-    }
-
     .experience-meta {
         text-align: left;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
     }
 
     .contact-card,
@@ -1189,5 +1242,13 @@ button {
 
     .floating-whatsapp span {
         display: none;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+    }
+
+    .project-features-list {
+        padding-left: 1rem;
     }
 }

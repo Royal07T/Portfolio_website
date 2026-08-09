@@ -2,51 +2,32 @@ const skills = [
     {
         label: 'Backend',
         icon: 'BE',
-        title: 'Laravel, REST APIs, JWT, Sanctum, RBAC',
+        title: 'PHP, Laravel, REST APIs, Authentication, RBAC',
         description: 'Building secure backend services, authentication systems, business logic, and scalable production APIs.',
-        level: 98,
-    },
-    {
-        label: 'Full Stack',
-        icon: 'FS',
-        title: 'Laravel, Vue.js, React, TypeScript, Next.js',
-        description: 'Delivering connected product experiences across frontend, backend, typed interfaces, and real-world workflows.',
-        level: 95,
     },
     {
         label: 'Frontend',
         icon: 'UI',
-        title: 'Vue.js, React, TypeScript, Next.js, Tailwind CSS',
+        title: 'Vue.js, Vue 3, JavaScript, TypeScript, React, HTML5, CSS3',
         description: 'Responsive interfaces with component-driven architecture, maintainable UI systems, and strong usability focus.',
-        level: 92,
     },
     {
         label: 'Database',
         icon: 'DB',
-        title: 'MySQL, SQL, Database Design, Query Optimization',
+        title: 'MySQL, PostgreSQL, Database Design',
         description: 'Schema design, query tuning, reporting flows, and production-ready data handling for business applications.',
-        level: 90,
     },
     {
-        label: 'Payments',
-        icon: 'PY',
-        title: 'Paystack, Flutterwave, Stripe, Korapay',
-        description: 'Integrating payment gateways, webhook processing, validation, and transaction-focused backend flows.',
-        level: 89,
-    },
-    {
-        label: 'Tools',
+        label: 'Tools & Engineering',
         icon: 'TL',
-        title: 'Git, GitHub, Linux, Apache, Composer, Postman',
-        description: 'Daily engineering workflow tools for collaboration, server environments, API testing, and delivery discipline.',
-        level: 87,
+        title: 'Git, GitHub, API Integrations, Cloud/Deployment',
+        description: 'Daily engineering workflow tools for collaboration, version control, API testing, and delivery discipline.',
     },
     {
-        label: 'AI Tools',
+        label: 'AI-Assisted Development',
         icon: 'AI',
         title: 'ChatGPT, Claude, Cursor',
-        description: 'Using LLM AI-assisted development to speed up debugging, documentation, prototyping, and feature delivery.',
-        level: 93,
+        description: 'Using LLM AI-assisted development to accelerate research, debugging, documentation, and feature delivery.',
     },
 ];
 
@@ -85,36 +66,48 @@ const services = [
 
 const projects = [
     {
-        title: 'DoctorOnTap Telemedicine Platform',
+        title: 'DoctorOnTap',
         category: 'HealthTech',
-        description: 'Developed secure APIs supporting patient management, doctor consultations, appointments, prescriptions, online payments, pharmacy services, and medication delivery.',
-        tags: ['Laravel', 'Vue.js', 'MySQL', 'REST APIs', 'Healthcare'],
+        description: 'A digital health platform designed to connect patients with healthcare services.',
+        contribution: 'Full-stack development focused on backend systems, APIs, authentication, database functionality and application features.',
+        features: ['Authentication', 'Role-based access', 'REST APIs', 'Healthcare workflows', 'Database-driven functionality', 'Admin functionality'],
+        tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs'],
         image: 'assets/images/doctorontap.png',
         link: 'https://new.doctorontap.com.ng/',
+        github: null,
+    },
+    {
+        title: 'Xala Premium',
+        category: 'Hospitality',
+        description: 'Online hotel booking and reservation platform featuring room availability, booking management, and a robust admin dashboard.',
+        contribution: 'Full-stack development focused on backend APIs, booking workflows, customer management, and platform enhancements.',
+        features: ['Booking workflows', 'Room availability', 'Customer management', 'Admin dashboard', 'Payment integration'],
+        tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs'],
+        image: 'assets/images/xala.png',
+        link: 'https://xalapremium.com.ng/',
+        github: null,
+    },
+    {
+        title: 'Wired Banking Africa',
+        category: 'FinTech',
+        description: 'Backend services supporting merchant wallets, POS systems, and financial transactions.',
+        contribution: 'Backend development focused on secure APIs, authentication, validation, user management, and production services.',
+        features: ['Secure APIs', 'Authentication', 'User management', 'Transaction processing', 'Production services'],
+        tags: ['Laravel', 'PHP', 'MySQL', 'REST APIs', 'POS Systems'],
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
+        link: '#contact',
+        github: null,
     },
     {
         title: 'Loan Management System',
         category: 'FinTech',
-        description: 'Built backend modules for a loan management platform, including payment gateway integrations, webhook processing, and optimized SQL-backed financial workflows.',
-        tags: ['Laravel', 'Payments', 'MySQL', 'Webhooks'],
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
+        description: 'Backend modules for a loan management platform with payment gateway integrations.',
+        contribution: 'Backend development focused on payment gateway integrations, webhook processing, and optimized SQL-backed financial workflows.',
+        features: ['Payment gateway integration', 'Webhook processing', 'Financial workflows', 'Query optimization'],
+        tags: ['Laravel', 'PHP', 'MySQL', 'Payments', 'Webhooks'],
+        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200',
         link: '#contact',
-    },
-    {
-        title: 'Merchant Wallet & POS Platform',
-        category: 'FinTech Infrastructure',
-        description: 'Built merchant onboarding, wallet management, transaction processing, reporting, and business operations architecture using Laravel, React, and TypeScript.',
-        tags: ['Laravel', 'React', 'TypeScript', 'POS Architecture'],
-        image: 'assets/images/pos.jpeg',
-        link: '#contact',
-    },
-    {
-        title: 'Xala Premium Booking Platform',
-        category: 'Hospitality',
-        description: 'Developed backend APIs and frontend booking features for hotel reservations, event workflows, customer management, and platform enhancements.',
-        tags: ['Laravel', 'Vue.js', 'MySQL', 'Booking Workflows'],
-        image: 'assets/images/xala.png',
-        link: 'https://xalapremium.com.ng/',
+        github: null,
     },
 ];
 
@@ -181,16 +174,18 @@ const education = [
     {
         title: 'Bachelor of Science in Computer Science',
         organization: 'University of the People (UoPeople)',
-        meta: 'Expected 2030',
+        meta: 'In Progress',
     },
 ];
 
 const certifications = [
     {
         title: 'Cisco Certified Network Associate (CCNA)',
+        link: 'https://www.credly.com/badges/cd734bbd-bdf1-479d-9a45-ab6a3e363003/linked_in_profile',
     },
     {
         title: 'ALX Software Engineering Program',
+        link: 'assets/images/My AlX Cert.pdf',
     },
     {
         title: 'W3Schools Web Development Certifications',
@@ -213,9 +208,6 @@ function renderSkills() {
                         <span class="skill-icon">${skill.icon}</span>
                     </div>
                     <p>${skill.description}</p>
-                    <div class="skill-meter" aria-label="${skill.label} proficiency ${skill.level}%">
-                        <span style="width: ${skill.level}%"></span>
-                    </div>
                 </article>
             `
         )
@@ -254,6 +246,22 @@ function renderProjects() {
             const actionLabel = project.link.startsWith('http') ? 'Visit Project' : 'Discuss Project';
             const actionTarget = project.link.startsWith('http') ? ' target="_blank" rel="noreferrer"' : '';
 
+            const contributionSection = project.contribution ? `
+                <div class="project-section">
+                    <span class="project-section-label">My Contribution</span>
+                    <p class="project-section-text">${project.contribution}</p>
+                </div>
+            ` : '';
+
+            const featuresSection = project.features && project.features.length ? `
+                <div class="project-section">
+                    <span class="project-section-label">Key Features</span>
+                    <ul class="project-features-list">
+                        ${project.features.map((feature) => `<li>${feature}</li>`).join('')}
+                    </ul>
+                </div>
+            ` : '';
+
             return `
                 <article class="project-card glass-card">
                     <div class="project-media">${media}</div>
@@ -263,6 +271,8 @@ function renderProjects() {
                         </div>
                         <h3 class="project-title">${project.title}</h3>
                         <p class="project-description">${project.description}</p>
+                        ${contributionSection}
+                        ${featuresSection}
                         <div class="project-tags">
                             ${project.tags.map((tag) => `<span>${tag}</span>`).join('')}
                         </div>
@@ -325,11 +335,17 @@ function renderCredentials() {
     if (certificationsList) {
         certificationsList.innerHTML = certifications
             .map(
-                (item) => `
-                    <article class="credential-card glass-card">
-                        <h3>${item.title}</h3>
-                    </article>
-                `
+                (item) => {
+                    const linkHtml = item.link
+                        ? `<a href="${item.link}" target="_blank" rel="noreferrer" class="credential-link">View Certificate</a>`
+                        : '';
+                    return `
+                        <article class="credential-card glass-card">
+                            <h3>${item.title}</h3>
+                            ${linkHtml}
+                        </article>
+                    `;
+                }
             )
             .join('');
     }
@@ -475,7 +491,6 @@ function setYear() {
 }
 
 renderSkills();
-renderServices();
 renderProjects();
 renderExperience();
 renderCredentials();
