@@ -68,9 +68,9 @@ const projects = [
     {
         title: 'DoctorOnTap',
         category: 'HealthTech',
-        description: 'A digital health platform designed to connect patients with healthcare services.',
-        contribution: 'Full-stack development focused on backend systems, APIs, authentication, database functionality and application features.',
-        features: ['Authentication', 'Role-based access', 'REST APIs', 'Healthcare workflows', 'Database-driven functionality', 'Admin functionality'],
+        description: 'A digital health platform connecting patients with healthcare services including consultations, prescriptions, and delivery coordination.',
+        contribution: 'Full-stack development focused on backend systems, REST APIs, authentication, database design, and healthcare workflow implementation.',
+        features: ['REST API architecture', 'Authentication & authorization', 'Role-based access control (RBAC)', 'Healthcare workflow management', 'Database-driven functionality', 'Admin dashboard'],
         tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs'],
         image: 'assets/images/doctorontap.png',
         link: 'https://new.doctorontap.com.ng/',
@@ -78,10 +78,10 @@ const projects = [
     },
     {
         title: 'Xala Premium',
-        category: 'Hospitality',
-        description: 'Online hotel booking and reservation platform featuring room availability, booking management, and a robust admin dashboard.',
-        contribution: 'Full-stack development focused on backend APIs, booking workflows, customer management, and platform enhancements.',
-        features: ['Booking workflows', 'Room availability', 'Customer management', 'Admin dashboard', 'Payment integration'],
+        category: 'SaaS / Web Application',
+        description: 'Hotel booking and reservation platform featuring room availability management, booking workflows, and administrative tools.',
+        contribution: 'Full-stack development focused on backend APIs, booking system logic, customer management, and platform feature enhancements.',
+        features: ['Booking workflows', 'Room availability system', 'Customer management', 'Admin dashboard', 'Payment integration', 'Responsive interface'],
         tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs'],
         image: 'assets/images/xala.png',
         link: 'https://xalapremium.com.ng/',
@@ -90,22 +90,11 @@ const projects = [
     {
         title: 'Wired Banking Africa',
         category: 'FinTech',
-        description: 'Backend services supporting merchant wallets, POS systems, and financial transactions.',
-        contribution: 'Backend development focused on secure APIs, authentication, validation, user management, and production services.',
-        features: ['Secure APIs', 'Authentication', 'User management', 'Transaction processing', 'Production services'],
+        description: 'Backend services supporting merchant wallets, POS systems, and financial transaction processing.',
+        contribution: 'Backend development focused on secure API design, authentication systems, user management, and maintaining production financial services.',
+        features: ['Secure API architecture', 'Authentication & validation', 'User management system', 'Transaction processing', 'POS system integration'],
         tags: ['Laravel', 'PHP', 'MySQL', 'REST APIs', 'POS Systems'],
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
-        link: '#contact',
-        github: null,
-    },
-    {
-        title: 'Loan Management System',
-        category: 'FinTech',
-        description: 'Backend modules for a loan management platform with payment gateway integrations.',
-        contribution: 'Backend development focused on payment gateway integrations, webhook processing, and optimized SQL-backed financial workflows.',
-        features: ['Payment gateway integration', 'Webhook processing', 'Financial workflows', 'Query optimization'],
-        tags: ['Laravel', 'PHP', 'MySQL', 'Payments', 'Webhooks'],
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200',
         link: '#contact',
         github: null,
     },
@@ -174,7 +163,7 @@ const education = [
     {
         title: 'Bachelor of Science in Computer Science',
         organization: 'University of the People (UoPeople)',
-        meta: 'In Progress',
+        meta: 'Currently Enrolled',
     },
 ];
 
@@ -297,12 +286,9 @@ function renderExperience() {
                     <div class="experience-head">
                         <div>
                             <h3 class="experience-role">${item.role}</h3>
-                            <div class="experience-company">${item.company}</div>
+                            <p class="experience-company">${item.company}</p>
                         </div>
-                        <div class="experience-meta">
-                            <div>${item.period}</div>
-                            <div>${item.meta}</div>
-                        </div>
+                        <span class="experience-period">${item.period}</span>
                     </div>
                     <p class="experience-description">${item.description}</p>
                     <div class="experience-tags">
@@ -314,41 +300,42 @@ function renderExperience() {
         .join('');
 }
 
-function renderCredentials() {
-    const educationList = document.getElementById('education-list');
-    const certificationsList = document.getElementById('certifications-list');
+function renderEducation() {
+    const list = document.getElementById('education-list');
+    if (!list) return;
 
-    if (educationList) {
-        educationList.innerHTML = education
-            .map(
-                (item) => `
+    list.innerHTML = education
+        .map(
+            (item) => `
+                <article class="credential-card glass-card">
+                    <h3>${item.title}</h3>
+                    <p>${item.organization}</p>
+                    <span>${item.meta}</span>
+                </article>
+            `
+        )
+        .join('');
+}
+
+function renderCertifications() {
+    const list = document.getElementById('certifications-list');
+    if (!list) return;
+
+    list.innerHTML = certifications
+        .map(
+            (item) => {
+                const linkHtml = item.link
+                    ? `<a href="${item.link}" target="_blank" rel="noreferrer" class="credential-link">View Certificate</a>`
+                    : '';
+                return `
                     <article class="credential-card glass-card">
                         <h3>${item.title}</h3>
-                        <p>${item.organization}</p>
-                        <span>${item.meta}</span>
+                        ${linkHtml}
                     </article>
-                `
-            )
-            .join('');
-    }
-
-    if (certificationsList) {
-        certificationsList.innerHTML = certifications
-            .map(
-                (item) => {
-                    const linkHtml = item.link
-                        ? `<a href="${item.link}" target="_blank" rel="noreferrer" class="credential-link">View Certificate</a>`
-                        : '';
-                    return `
-                        <article class="credential-card glass-card">
-                            <h3>${item.title}</h3>
-                            ${linkHtml}
-                        </article>
-                    `;
-                }
-            )
-            .join('');
-    }
+                `;
+            }
+        )
+        .join('');
 }
 
 function setupThemeToggle() {
@@ -493,6 +480,8 @@ function setYear() {
 renderSkills();
 renderProjects();
 renderExperience();
+renderEducation();
+renderCertifications();
 setupThemeToggle();
 setupMobileMenu();
 setupRevealAnimations();
