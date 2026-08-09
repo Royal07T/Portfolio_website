@@ -104,7 +104,7 @@ const experiences = [
     {
         role: 'Full-Stack Software Engineer',
         company: 'DoctorOnTap (HealthTech)',
-        period: 'Jul 2024 - Present',
+        period: 'Jul 2025 - Present',
         meta: 'Remote',
         description: 'Develop and maintain production features for a telemedicine platform serving patients, doctors, pharmacies, and delivery partners. Design secure REST APIs for appointments, consultations, prescriptions, healthcare workflows, authentication, authorization, RBAC, and payment integrations while improving stability and backend performance.',
         tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs', 'JWT'],
@@ -112,7 +112,7 @@ const experiences = [
     {
         role: 'Full-Stack Software Engineer',
         company: 'Xala Premium',
-        period: 'Nov 2023 - May 2024',
+        period: 'Nov 2025 - May 2024',
         meta: 'Remote',
         description: 'Developed backend APIs and frontend features for a hotel and event booking platform. Built booking workflows, maintained existing modules, resolved production issues, refactored legacy code, and improved overall performance.',
         tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs'],
@@ -120,7 +120,7 @@ const experiences = [
     {
         role: 'Backend Software Engineer',
         company: 'Wired Banking Africa (FinTech)',
-        period: 'May 2023 - Dec 2023',
+        period: 'May 2024 - Dec 2024',
         meta: 'Hybrid',
         description: 'Built backend services supporting merchant wallets, POS systems, and financial transactions. Developed secure APIs with authentication, validation, user management, and maintained production services.',
         tags: ['Laravel', 'PHP', 'MySQL', 'REST APIs', 'Git', 'POS Systems'],
@@ -128,7 +128,7 @@ const experiences = [
     {
         role: 'Backend Software Engineer',
         company: 'Methic Technology Ltd',
-        period: 'Feb 2023 - May 2023',
+        period: 'Feb 2024 - May 2024',
         meta: 'Hybrid',
         description: 'Developed backend modules for a loan management platform, integrated payment gateways and webhook processing, optimized SQL queries, and maintained production backend services.',
         tags: ['Laravel', 'PHP', 'MySQL', 'Payments', 'Webhooks', 'Query Optimization'],
@@ -136,15 +136,15 @@ const experiences = [
     {
         role: 'Network Administrator',
         company: 'Rosa Mystical Academy',
-        period: 'Feb 2023',
+        period: 'Feb 2023 - may 2026',
         meta: 'Part-time',
         description: 'Handled networking and infrastructure support with focus on access, connectivity, and security fundamentals.',
-        tags: ['Network Engineering', 'Security'],
+        tags: ['Network Engineering', 'Security','Network Administrator'],
     },
     {
         role: 'Tutor',
         company: 'Freelance Educator',
-        period: 'Jun 2022 - Oct 2022',
+        period: 'Jun 2022 - Oct 2023',
         meta: 'Education',
         description: 'Conducted hands-on tutorials in PHP, HTML, and CSS, helping learners improve practical web development knowledge.',
         tags: ['Teaching', 'PHP', 'HTML', 'CSS'],
