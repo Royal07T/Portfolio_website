@@ -24,10 +24,10 @@ const skills = [
         description: 'Designing secure API architectures, authentication systems, and integrating third-party services.',
     },
     {
-        label: 'Tools',
-        icon: 'TL',
-        title: 'Git, GitHub, Docker, Vercel, Netlify',
-        description: 'Version control, containerization, deployment platforms, and development workflow tools.',
+        label: 'AI / Development Tools',
+        icon: 'AI',
+        title: 'ChatGPT, Claude, Cursor, Git, GitHub',
+        description: 'Using AI tools to accelerate research, prototyping, debugging, and documentation while maintaining engineering quality.',
     },
 ];
 
@@ -175,9 +175,6 @@ const certifications = [
     {
         title: 'ALX Software Engineering Program',
         link: 'assets/images/My AlX Cert.pdf',
-    },
-    {
-        title: 'W3Schools Web Development Certifications',
     },
 ];
 
