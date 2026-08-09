@@ -112,7 +112,7 @@ const experiences = [
     {
         role: 'Full-Stack Software Engineer',
         company: 'Xala Premium',
-        period: 'Nov 2025 - May 2024',
+        period: 'Nov 2025 - May 2026',
         meta: 'Remote',
         description: 'Developed backend APIs and frontend features for a hotel and event booking platform. Built booking workflows, maintained existing modules, resolved production issues, refactored legacy code, and improved overall performance.',
         tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs'],
