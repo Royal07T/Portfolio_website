@@ -107,7 +107,7 @@ const experiences = [
         period: 'Jul 2024 - Present',
         meta: 'Remote',
         description: 'Develop and maintain production features for a telemedicine platform serving patients, doctors, pharmacies, and delivery partners. Design secure REST APIs for appointments, consultations, prescriptions, healthcare workflows, authentication, authorization, RBAC, and payment integrations while improving stability and backend performance.',
-        tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs', 'JWT', 'AI-assisted Delivery'],
+        tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs', 'JWT'],
     },
     {
         role: 'Full-Stack Software Engineer',
