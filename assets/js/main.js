@@ -2,32 +2,32 @@ const skills = [
     {
         label: 'Backend',
         icon: 'BE',
-        title: 'PHP, Laravel, REST APIs, Authentication, RBAC',
+        title: 'PHP, Laravel, Python, FastAPI, Node.js',
         description: 'Building secure backend services, authentication systems, business logic, and scalable production APIs.',
     },
     {
         label: 'Frontend',
         icon: 'UI',
-        title: 'Vue.js, Vue 3, JavaScript, TypeScript, React, HTML5, CSS3',
+        title: 'JavaScript, TypeScript, Vue.js, React, HTML5, CSS3',
         description: 'Responsive interfaces with component-driven architecture, maintainable UI systems, and strong usability focus.',
     },
     {
         label: 'Database',
         icon: 'DB',
-        title: 'MySQL, PostgreSQL, Database Design',
+        title: 'MySQL, PostgreSQL, MongoDB',
         description: 'Schema design, query tuning, reporting flows, and production-ready data handling for business applications.',
     },
     {
-        label: 'Tools & Engineering',
-        icon: 'TL',
-        title: 'Git, GitHub, API Integrations, Cloud/Deployment',
-        description: 'Daily engineering workflow tools for collaboration, version control, API testing, and delivery discipline.',
+        label: 'Engineering',
+        icon: 'EG',
+        title: 'REST APIs, Authentication, RBAC, API Integration',
+        description: 'Designing secure API architectures, authentication systems, and integrating third-party services.',
     },
     {
-        label: 'AI-Assisted Development',
-        icon: 'AI',
-        title: 'ChatGPT, Claude, Cursor',
-        description: 'Using LLM AI-assisted development to accelerate research, debugging, documentation, and feature delivery.',
+        label: 'Tools',
+        icon: 'TL',
+        title: 'Git, GitHub, Docker, Vercel, Netlify',
+        description: 'Version control, containerization, deployment platforms, and development workflow tools.',
     },
 ];
 
@@ -115,7 +115,7 @@ const experiences = [
     {
         role: 'Full-Stack Software Engineer',
         company: 'DoctorOnTap (HealthTech)',
-        period: 'Jul 2025 - Present',
+        period: 'Jul 2024 - Present',
         meta: 'Remote',
         description: 'Develop and maintain production features for a telemedicine platform serving patients, doctors, pharmacies, and delivery partners. Design secure REST APIs for appointments, consultations, prescriptions, healthcare workflows, authentication, authorization, RBAC, and payment integrations while improving stability and backend performance.',
         tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs', 'JWT', 'AI-assisted Delivery'],
@@ -123,7 +123,7 @@ const experiences = [
     {
         role: 'Full-Stack Software Engineer',
         company: 'Xala Premium',
-        period: 'Nov 2025 - May 2026',
+        period: 'Nov 2023 - May 2024',
         meta: 'Remote',
         description: 'Developed backend APIs and frontend features for a hotel and event booking platform. Built booking workflows, maintained existing modules, resolved production issues, refactored legacy code, and improved overall performance.',
         tags: ['Laravel', 'PHP', 'Vue.js', 'MySQL', 'REST APIs'],
@@ -131,7 +131,7 @@ const experiences = [
     {
         role: 'Backend Software Engineer',
         company: 'Wired Banking Africa (FinTech)',
-        period: 'May 2025 - Dec 2025',
+        period: 'May 2023 - Dec 2023',
         meta: 'Hybrid',
         description: 'Built backend services supporting merchant wallets, POS systems, and financial transactions. Developed secure APIs with authentication, validation, user management, and maintained production services.',
         tags: ['Laravel', 'PHP', 'MySQL', 'REST APIs', 'Git', 'POS Systems'],
@@ -139,7 +139,7 @@ const experiences = [
     {
         role: 'Backend Software Engineer',
         company: 'Methic Technology Ltd',
-        period: 'Feb 2025 - May 2025',
+        period: 'Feb 2023 - May 2023',
         meta: 'Hybrid',
         description: 'Developed backend modules for a loan management platform, integrated payment gateways and webhook processing, optimized SQL queries, and maintained production backend services.',
         tags: ['Laravel', 'PHP', 'MySQL', 'Payments', 'Webhooks', 'Query Optimization'],
@@ -147,7 +147,7 @@ const experiences = [
     {
         role: 'Network Administrator',
         company: 'Rosa Mystical Academy',
-        period: 'Feb 2025',
+        period: 'Feb 2023',
         meta: 'Part-time',
         description: 'Handled networking and infrastructure support with focus on access, connectivity, and security fundamentals.',
         tags: ['Network Engineering', 'Security'],
@@ -155,7 +155,7 @@ const experiences = [
     {
         role: 'Tutor',
         company: 'Freelance Educator',
-        period: 'Jun 2024 - Oct 2024',
+        period: 'Jun 2022 - Oct 2022',
         meta: 'Education',
         description: 'Conducted hands-on tutorials in PHP, HTML, and CSS, helping learners improve practical web development knowledge.',
         tags: ['Teaching', 'PHP', 'HTML', 'CSS'],
@@ -163,7 +163,7 @@ const experiences = [
     {
         role: 'Network Engineer',
         company: 'Galak Tech',
-        period: 'Jan 2019 - Mar 2024',
+        period: 'Jan 2019 - Mar 2022',
         meta: 'Full-time · On-site · Abuja, Nigeria',
         description: 'Engineered and maintained reliable network solutions, diagnosed issues, and improved infrastructure stability through hands-on support and deployment work.',
         tags: ['Network Infrastructure', 'Cisco', 'VPN'],
@@ -493,7 +493,6 @@ function setYear() {
 renderSkills();
 renderProjects();
 renderExperience();
-renderCredentials();
 setupThemeToggle();
 setupMobileMenu();
 setupRevealAnimations();
