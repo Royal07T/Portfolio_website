@@ -173,6 +173,18 @@ const certifications = [
         link: 'https://www.credly.com/badges/cd734bbd-bdf1-479d-9a45-ab6a3e363003/linked_in_profile',
     },
     {
+        title: 'CCNAv7: Introduction to Networks',
+        link: 'assets/docs/Timothy JehwoOghenero-CCNA CLASS ITN-certificate.pdf',
+    },
+    {
+        title: 'CCNAv7: Switching, Routing, and Wireless Essentials',
+        link: 'assets/docs/Timothy JehwoOghenero-CCNA CLASS SRWE-certificate.pdf',
+    },
+    {
+        title: 'CCNAv7: Enterprise Networking, Security, and Automation',
+        link: 'assets/docs/Timothy JehwoOghenero-CCNA CLASS ENSA-certificate.pdf',
+    },
+    {
         title: 'ALX Software Engineering Program',
         link: 'assets/images/My AlX Cert.pdf',
     },
