@@ -176,6 +176,10 @@ const certifications = [
         title: 'ALX Software Engineering Program',
         link: 'assets/images/My AlX Cert.pdf',
     },
+    {
+        title: 'CodinGame Certification — C Problem Solving, With Honors',
+        link: 'assets/docs/Certification.pdf',
+    },
 ];
 
 function renderSkills() {
