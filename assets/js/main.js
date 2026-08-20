@@ -66,6 +66,17 @@ const services = [
 
 const projects = [
     {
+        title: 'MedExplain',
+        category: 'HealthTech / AI',
+        description: 'An AI-powered medical report analysis platform that transforms lab results into human-readable explanations with health timelines and clinician collaboration features.',
+        contribution: 'Full-stack development including Laravel backend API, FastAI service for text extraction and LLM integration, Vue 3 frontend, authentication system, RBAC, and OAuth 2.0 provider integration.',
+        features: ['Medical report upload (PDF/JPG/PNG)', 'AI-powered text extraction and lab result parsing', 'Educational explanations with reference-range comparisons', 'Health timeline and lab trends', 'Personal health record dashboard', 'AI assistant grounded in user health context', 'Clinician portal with audited patient consent', 'OAuth 2.0 provider integration', 'OpenAPI 3.0 specification', 'Plans & subscriptions system'],
+        tags: ['Laravel', 'PHP', 'Vue.js', 'FastAPI', 'Python', 'MySQL', 'Redis', 'REST APIs', 'OAuth 2.0', 'Docker'],
+        image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200',
+        link: 'https://github.com/Royal07T/MedExplain',
+        github: 'https://github.com/Royal07T/MedExplain',
+    },
+    {
         title: 'DoctorOnTap',
         category: 'HealthTech',
         description: 'A digital health platform connecting patients with healthcare services including consultations, prescriptions, and delivery coordination.',
