@@ -31,11 +31,20 @@ const skills = [
     },
 ];
 
+const serviceIcons = [
+    '<rect x="2" y="3" width="20" height="8" rx="2"></rect><rect x="2" y="13" width="20" height="8" rx="2"></rect><path d="M6 7h.01M6 17h.01"></path>',
+    '<path d="m12 2 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 17 9 5 9-5"></path>',
+    '<rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path>',
+    '<path d="M3.5 18a9 9 0 1 1 17 0"></path><path d="m12 14 4-5"></path><circle cx="12" cy="14" r="1.4"></circle>',
+    '<rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m6 9 3 3-3 3M12 15h5"></path>',
+    '<path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z"></path><path d="M19 16v5M16.5 18.5h5"></path>',
+];
+
 const services = [
     {
         title: 'Backend API Development',
-        description: 'Designing secure, maintainable Laravel APIs for business logic, authentication, RBAC, integrations, and production workflows.',
-        tags: ['Laravel', 'REST APIs', 'JWT', 'Sanctum'],
+        description: 'Designing secure, maintainable Laravel and Python APIs for business logic, authentication, RBAC, integrations, and production workflows.',
+        tags: ['Laravel', 'Python', 'FastAPI', 'REST APIs', 'JWT', 'Sanctum'],
     },
     {
         title: 'Full-Stack Product Development',
@@ -69,7 +78,7 @@ const projects = [
         title: 'MedExplain',
         category: 'HealthTech / AI',
         description: 'An AI-powered medical report analysis platform that transforms lab results into human-readable explanations with health timelines and clinician collaboration features.',
-        contribution: 'Full-stack development including Laravel backend API, FastAI service for text extraction and LLM integration, Vue 3 frontend, authentication system, RBAC, and OAuth 2.0 provider integration.',
+        contribution: 'Full-stack development including Laravel backend API, FastAPI service for text extraction and LLM integration, Vue 3 frontend, authentication system, RBAC, and OAuth 2.0 provider integration.',
         features: ['Medical report upload (PDF/JPG/PNG)', 'AI-powered text extraction and lab result parsing', 'Educational explanations with reference-range comparisons', 'Health timeline and lab trends', 'Personal health record dashboard', 'AI assistant grounded in user health context', 'Clinician portal with audited patient consent', 'OAuth 2.0 provider integration', 'OpenAPI 3.0 specification', 'Plans & subscriptions system'],
         tags: ['Laravel', 'PHP', 'Vue.js', 'FastAPI', 'Python', 'MySQL', 'Redis', 'REST APIs', 'OAuth 2.0', 'Docker'],
         image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200',
@@ -147,10 +156,10 @@ const experiences = [
     {
         role: 'Network Administrator',
         company: 'Rosa Mystical Academy',
-        period: 'Feb 2023 - may 2026',
+        period: 'Feb 2023 - May 2026',
         meta: 'Part-time',
         description: 'Handled networking and infrastructure support with focus on access, connectivity, and security fundamentals.',
-        tags: ['Network Engineering', 'Security','Network Administrator'],
+        tags: ['Network Engineering', 'Security', 'Network Administrator'],
     },
     {
         role: 'Tutor',
@@ -205,36 +214,22 @@ const certifications = [
     },
 ];
 
-function renderSkills() {
-    const skillsGrid = document.getElementById('skills-grid');
-    if (!skillsGrid) return;
-
-    skillsGrid.innerHTML = skills
-        .map(
-            (skill) => `
-                <article class="skill-card glass-card">
-                    <div class="skill-top">
-                        <div>
-                            <span class="skill-label">${skill.label}</span>
-                            <h3>${skill.title}</h3>
-                        </div>
-                        <span class="skill-icon">${skill.icon}</span>
-                    </div>
-                    <p>${skill.description}</p>
-                </article>
-            `
-        )
-        .join('');
-}
+const arrowUpRight = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>';
+const chevronDown = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>';
+const capIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5 10-5Z"></path><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"></path></svg>';
+const badgeIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="m9 14-1 7 4-2 4 2-1-7"></path></svg>';
 
 function renderServices() {
-    const servicesGrid = document.getElementById('services-grid');
-    if (!servicesGrid) return;
+    const grid = document.getElementById('services-grid');
+    if (!grid) return;
 
-    servicesGrid.innerHTML = services
+    grid.innerHTML = services
         .map(
-            (service) => `
+            (service, index) => `
                 <article class="service-card glass-card">
+                    <span class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${serviceIcons[index % serviceIcons.length]}</svg>
+                    </span>
                     <h3 class="service-title">${service.title}</h3>
                     <p class="service-description">${service.description}</p>
                     <div class="service-tags">
@@ -246,51 +241,88 @@ function renderServices() {
         .join('');
 }
 
-function renderProjects() {
-    const projectsGrid = document.getElementById('projects-grid');
-    if (!projectsGrid) return;
+function renderSkills() {
+    const grid = document.getElementById('skills-grid');
+    if (!grid) return;
 
-    projectsGrid.innerHTML = projects
-        .map((project) => {
+    grid.innerHTML = skills
+        .map(
+            (skill, index) => {
+                const tools = skill.title.split(',').map((tool) => tool.trim());
+                return `
+                    <article class="skill-card glass-card">
+                        <div class="skill-top">
+                            <div>
+                                <span class="skill-label">Expertise ${String(index + 1).padStart(2, '0')}</span>
+                                <h3>${skill.label}</h3>
+                            </div>
+                            <span class="skill-icon" aria-hidden="true">${skill.icon}</span>
+                        </div>
+                        <p>${skill.description}</p>
+                        <div class="skill-chips">
+                            ${tools.map((tool) => `<span>${tool}</span>`).join('')}
+                        </div>
+                    </article>
+                `;
+            }
+        )
+        .join('');
+}
+
+function renderProjects() {
+    const grid = document.getElementById('projects-grid');
+    if (!grid) return;
+
+    grid.innerHTML = projects
+        .map((project, index) => {
             const media = project.image
-                ? `<img src="${project.image}" alt="${project.title} preview">`
+                ? `<img src="${project.image}" alt="${project.title} preview" loading="lazy">`
                 : `<div class="project-placeholder">${project.title}</div>`;
 
-            const actionLabel = project.link.startsWith('http') ? 'Visit Project' : 'Discuss Project';
-            const actionTarget = project.link.startsWith('http') ? ' target="_blank" rel="noreferrer"' : '';
+            const isExternal = project.link.startsWith('http');
+            const actionLabel = isExternal ? 'Visit Project' : 'Discuss Project';
+            const actionTarget = isExternal ? ' target="_blank" rel="noreferrer"' : '';
 
-            const contributionSection = project.contribution ? `
-                <div class="project-section">
-                    <span class="project-section-label">My Contribution</span>
-                    <p class="project-section-text">${project.contribution}</p>
-                </div>
-            ` : '';
+            const contribution = project.contribution
+                ? `<div class="project-section"><span class="project-section-label">My Contribution</span><p class="project-section-text">${project.contribution}</p></div>`
+                : '';
 
-            const featuresSection = project.features && project.features.length ? `
-                <div class="project-section">
-                    <span class="project-section-label">Key Features</span>
-                    <ul class="project-features-list">
-                        ${project.features.map((feature) => `<li>${feature}</li>`).join('')}
-                    </ul>
-                </div>
-            ` : '';
+            const features = project.features && project.features.length
+                ? `<div class="project-section"><span class="project-section-label">Key Features</span><ul class="project-features-list">${project.features.map((feature) => `<li>${feature}</li>`).join('')}</ul></div>`
+                : '';
+
+            const hasDetails = Boolean(contribution || features);
+            const details = hasDetails
+                ? `
+                    <div class="project-details" id="project-details-${index}">
+                        <div class="project-details-inner">${contribution}${features}</div>
+                    </div>
+                    <button class="details-toggle" type="button" aria-expanded="false" aria-controls="project-details-${index}">
+                        View details ${chevronDown}
+                    </button>
+                `
+                : '';
+
+            const github = project.github
+                ? `<a class="project-link" href="${project.github}" target="_blank" rel="noreferrer">Source code ${arrowUpRight}</a>`
+                : '';
 
             return `
                 <article class="project-card glass-card">
-                    <div class="project-media">${media}</div>
+                    <div class="project-media">
+                        ${media}
+                        <span class="project-category">${project.category}</span>
+                    </div>
                     <div class="project-body">
-                        <div class="project-topline">
-                            <span class="project-category">${project.category}</span>
-                        </div>
                         <h3 class="project-title">${project.title}</h3>
                         <p class="project-description">${project.description}</p>
-                        ${contributionSection}
-                        ${featuresSection}
+                        ${details}
                         <div class="project-tags">
                             ${project.tags.map((tag) => `<span>${tag}</span>`).join('')}
                         </div>
                         <div class="project-actions">
-                            <a class="project-link" href="${project.link}"${actionTarget}>${actionLabel}</a>
+                            <a class="project-link" href="${project.link}"${actionTarget}>${actionLabel} ${arrowUpRight}</a>
+                            ${github}
                         </div>
                     </div>
                 </article>
@@ -306,11 +338,11 @@ function renderExperience() {
     list.innerHTML = experiences
         .map(
             (item) => `
-                <article class="experience-card glass-card">
+                <article class="experience-card glass-card${item.period.includes('Present') ? ' is-current' : ''}">
                     <div class="experience-head">
                         <div>
                             <h3 class="experience-role">${item.role}</h3>
-                            <p class="experience-company">${item.company}</p>
+                            <p class="experience-company">${item.company} <span class="experience-meta">· ${item.meta}</span></p>
                         </div>
                         <span class="experience-period">${item.period}</span>
                     </div>
@@ -332,9 +364,10 @@ function renderEducation() {
         .map(
             (item) => `
                 <article class="credential-card glass-card">
+                    <span class="credential-icon" aria-hidden="true">${capIcon}</span>
                     <h3>${item.title}</h3>
                     <p>${item.organization}</p>
-                    <span>${item.meta}</span>
+                    <span class="credential-meta">${item.meta}</span>
                 </article>
             `
         )
@@ -348,13 +381,14 @@ function renderCertifications() {
     list.innerHTML = certifications
         .map(
             (item) => {
-                const linkHtml = item.link
-                    ? `<a href="${item.link}" target="_blank" rel="noreferrer" class="credential-link">View Certificate</a>`
+                const link = item.link
+                    ? `<a href="${item.link}" target="_blank" rel="noreferrer" class="credential-link">View Certificate ${arrowUpRight}</a>`
                     : '';
                 return `
                     <article class="credential-card glass-card">
+                        <span class="credential-icon" aria-hidden="true">${badgeIcon}</span>
                         <h3>${item.title}</h3>
-                        ${linkHtml}
+                        ${link}
                     </article>
                 `;
             }
@@ -363,29 +397,26 @@ function renderCertifications() {
 }
 
 function setupThemeToggle() {
-    const body = document.body;
+    const root = document.documentElement;
     const toggle = document.getElementById('theme-toggle');
-    if (!body || !toggle) return;
+    if (!toggle) return;
 
-    const icon = toggle.querySelector('.theme-toggle-icon');
     const label = toggle.querySelector('.theme-toggle-label');
     const storageKey = 'portfolio-theme';
 
     const applyTheme = (theme) => {
-        body.dataset.theme = theme;
+        root.dataset.theme = theme;
         toggle.setAttribute('aria-pressed', String(theme === 'light'));
-        if (icon) icon.textContent = theme === 'light' ? '☀️' : '🌙';
+        toggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
         if (label) label.textContent = theme === 'light' ? 'Light' : 'Dark';
     };
 
-    const savedTheme = localStorage.getItem(storageKey);
-    const initialTheme = savedTheme || body.dataset.theme || 'dark';
-    applyTheme(initialTheme);
+    applyTheme(root.dataset.theme || 'dark');
 
     toggle.addEventListener('click', () => {
-        const nextTheme = body.dataset.theme === 'light' ? 'dark' : 'light';
-        localStorage.setItem(storageKey, nextTheme);
-        applyTheme(nextTheme);
+        const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+        localStorage.setItem(storageKey, next);
+        applyTheme(next);
     });
 }
 
@@ -394,24 +425,86 @@ function setupMobileMenu() {
     const menu = document.getElementById('mobile-menu');
     if (!button || !menu) return;
 
+    const close = () => {
+        menu.classList.remove('is-open');
+        button.classList.remove('is-open');
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-label', 'Open navigation menu');
+        document.body.classList.remove('menu-open');
+    };
+
     button.addEventListener('click', () => {
-        const isOpen = menu.classList.toggle('is-open');
-        button.classList.toggle('is-open', isOpen);
-        button.setAttribute('aria-expanded', String(isOpen));
+        const open = !menu.classList.contains('is-open');
+        menu.classList.toggle('is-open', open);
+        button.classList.toggle('is-open', open);
+        button.setAttribute('aria-expanded', String(open));
+        button.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        document.body.classList.toggle('menu-open', open);
     });
 
-    menu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('is-open');
-            button.classList.remove('is-open');
-            button.setAttribute('aria-expanded', 'false');
-        });
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', close));
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') close();
     });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1080) close();
+    });
+}
+
+function setupScrollUI() {
+    const header = document.getElementById('site-header');
+    const bar = document.getElementById('scroll-progress-bar');
+    const backToTop = document.getElementById('back-to-top');
+
+    const update = () => {
+        const scrolled = window.scrollY;
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollable > 0 ? Math.min(100, (scrolled / scrollable) * 100) : 0;
+
+        if (header) header.classList.toggle('is-scrolled', scrolled > 24);
+        if (bar) bar.style.width = `${progress}%`;
+        if (backToTop) backToTop.classList.toggle('is-visible', scrolled > 600);
+    };
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+}
+
+function setupActiveNav() {
+    const links = [...document.querySelectorAll('.desktop-nav a[href^="#"], .mobile-nav a[href^="#"]')];
+    const sections = [...document.querySelectorAll('main section[id]')];
+    if (!links.length || !sections.length || !('IntersectionObserver' in window)) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                links.forEach((link) => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+                });
+            });
+        },
+        { rootMargin: '-35% 0px -55% 0px' }
+    );
+
+    sections.forEach((section) => observer.observe(section));
 }
 
 function setupRevealAnimations() {
     const items = document.querySelectorAll('.reveal');
     if (!items.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+        items.forEach((item) => item.classList.add('is-visible'));
+        return;
+    }
 
     const observer = new IntersectionObserver(
         (entries) => {
@@ -422,10 +515,28 @@ function setupRevealAnimations() {
                 }
             });
         },
-        { threshold: 0.15 }
+        { threshold: 0.08 }
     );
 
     items.forEach((item) => observer.observe(item));
+}
+
+function setupProjectDetails() {
+    const grid = document.getElementById('projects-grid');
+    if (!grid) return;
+
+    grid.addEventListener('click', (event) => {
+        const button = event.target.closest('.details-toggle');
+        if (!button) return;
+
+        const details = document.getElementById(button.getAttribute('aria-controls'));
+        if (!details) return;
+
+        const open = !details.classList.contains('is-open');
+        details.classList.toggle('is-open', open);
+        button.setAttribute('aria-expanded', String(open));
+        button.innerHTML = `${open ? 'Hide details' : 'View details'} ${chevronDown}`;
+    });
 }
 
 function validateField(field) {
@@ -459,22 +570,24 @@ function setupContactForm() {
 
     const fields = [...form.querySelectorAll('input, textarea')];
 
+    const setStatus = (message, state) => {
+        status.textContent = message;
+        status.classList.toggle('is-error', state === 'error');
+        status.classList.toggle('is-success', state === 'success');
+    };
+
     fields.forEach((field) => {
         field.addEventListener('blur', () => validateField(field));
         field.addEventListener('input', () => {
-            if (field.getAttribute('aria-invalid') === 'true') {
-                validateField(field);
-            }
+            if (field.getAttribute('aria-invalid') === 'true') validateField(field);
         });
     });
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-        const isValid = fields.every(validateField);
 
-        if (!isValid) {
-            status.textContent = 'Please fix the highlighted fields and try again.';
-            status.style.color = '#ff8b8b';
+        if (!fields.every(validateField)) {
+            setStatus('Please fix the highlighted fields and try again.', 'error');
             return;
         }
 
@@ -483,12 +596,9 @@ function setupContactForm() {
         const message = document.getElementById('message').value.trim();
 
         const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
-        const body = encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\n\nProject details:\n${message}`
-        );
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nProject details:\n${message}`);
 
-        status.textContent = 'Opening your email app...';
-        status.style.color = '#94f5cb';
+        setStatus('Opening your email app...', 'success');
         window.location.href = `mailto:timmyroyalty@gmail.com?subject=${subject}&body=${body}`;
         form.reset();
     });
@@ -496,11 +606,10 @@ function setupContactForm() {
 
 function setYear() {
     const year = document.getElementById('year');
-    if (year) {
-        year.textContent = String(new Date().getFullYear());
-    }
+    if (year) year.textContent = String(new Date().getFullYear());
 }
 
+renderServices();
 renderSkills();
 renderProjects();
 renderExperience();
@@ -508,6 +617,9 @@ renderEducation();
 renderCertifications();
 setupThemeToggle();
 setupMobileMenu();
+setupScrollUI();
+setupActiveNav();
 setupRevealAnimations();
+setupProjectDetails();
 setupContactForm();
 setYear();
